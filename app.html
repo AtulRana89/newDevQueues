@@ -126,16 +126,18 @@
                     <div class="row justify-content-center">
                         <ul class="nav nav-tabs text-center col-lg-10 mx-auto">
                             <li class="nav-item col-md-6 col active">
-                                <a class="nav-link box_shadow p-4 text-center mb-5 text-uppercase" data-toggle="tab"
-                                    href="#nativemobileapplication">Native Mobile Application</a>
+                                <!-- <a class="nav-link box_shadow p-4 text-center mb-5 text-uppercase" data-toggle="tab"
+                                    href="#nativemobileapplication">Native Mobile Application</a> -->
+                                    <button class="tablinks" onclick="openCity(event, 'nativemobileapplication')">Native Mobile Application</button>
                             </li>
                             <li class="nav-item col-md-6 col">
-                                <a class="nav-link text-uppercase box_shadow p-4 text-center mb-5" data-toggle="tab"
-                                    href="#hybridmobileapplication">Hybrid Mobile Application</a>
+                                <button class="tablinks" onclick="openCity(event, 'hybridmobileapplication')">Hybrid Mobile Application</button>
+                                <!-- <a class="nav-link text-uppercase box_shadow p-4 text-center mb-5" data-toggle="tab"
+                                    href="#hybridmobileapplication">Hybrid Mobile Application</a> -->
                             </li>
                         </ul>
                     </div>
-                    <div id="nativemobileapplication" class="tab-content row content">
+                    <div id="nativemobileapplication" class="tab-content row content" style="display:flex;">
                         <div class="col-lg-6" data-aos="fade-up">
                             <div class="app-item">
                                 <h2>Native Mobile Application</h2>
@@ -160,48 +162,60 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- <div class="col-lg-6" data-aos="fade-right">
-                            <h2>Eum ipsam laborum deleniti velitena</h2>
-                            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen
-                                jonee
-                                trave</h3>
-                        </div> -->
                         <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
                             <div class="row content">
-                                <div class="col-lg-6" data-aos="fade-up">
-                                    <div class="testimonial-item">
+                                <div class="col-lg-6 tablinks1" data-aos="fade-up" onclick="openPlatform(event, 'android')">
+                                    <div class="testimonial-item" >
                                         <h2>FOR ANDROID</h2>
                                     </div>
+                                     <!-- <button class="tablinks" onclick="openCity(event, 'nativemobileapplication')">Native Mobile Application</button> -->
                                 </div>
-                                <div class="col-lg-6" data-aos="fade-up">
+                                <div class="col-lg-6 tablinks1" data-aos="fade-up" onclick="openPlatform(event, 'kotlin')">
                                     <div class="testimonial-item">
                                         <h2>FOR IOS</h2>
                                     </div>
                                 </div>
-                                <div class="mt-5">
-                                    <h4>Native app development for android</h4>
-                                    <p class="line-height-30">Native Android apps are created using Kotlin and Java.
-                                        Google offers a variety
-                                        of Android development tools, including
-                                        the official Android IDE (integrated development environment), the Android SDK
-                                        (software development kit) packaged with
-                                        Android Studio, a command-line tool for Windows, Macintosh, and Linux, Firebase,
-                                        and Android Jetpack.</p>
+                                <div id="android" class="mt-5 subcontent" style="display:block;">
+                                    <div>
+                                        <h4>Native app development for android</h4>
+                                        <p class="line-height-30">Native Android apps are created using Kotlin and Java.
+                                            Google offers a variety
+                                            of Android development tools, including
+                                            the official Android IDE (integrated development environment), the Android SDK
+                                            (software development kit) packaged with
+                                            Android Studio, a command-line tool for Windows, Macintosh, and Linux, Firebase,
+                                            and Android Jetpack.</p>
+                                    </div>
+                                    <div>
+                                        <h4>Kotlin App Development</h4>
+                                        <p class="line-height-30">Java and Kotlin are used to construct native Android
+                                            applications. The official Android IDE (integrated development
+                                            environment), the Android SDK (software development kit) that comes with Android
+                                            Studio, a command-line tool for
+                                            Windows, Macintosh, and Linux, Firebase, and Android Jetpack are just a few of
+                                            the Android development tools that Google
+                                            provides.</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4>Kotlin App Development</h4>
-                                    <p class="line-height-30">Java and Kotlin are used to construct native Android
-                                        applications. The official Android IDE (integrated development
-                                        environment), the Android SDK (software development kit) that comes with Android
-                                        Studio, a command-line tool for
-                                        Windows, Macintosh, and Linux, Firebase, and Android Jetpack are just a few of
-                                        the Android development tools that Google
-                                        provides.</p>
+                                <div id="kotlin" class="mt-5 subcontent">
+                                    <div>
+                                        <h4>Native app development for iOS</h4>
+                                        <p class="line-height-30">Native iOS applications developed in Swift or Objective-C. The iOS operating system, which was developed specifically
+                                        for Apple hardware, has closed source code, in contrast to Android. Thus, in order to create native iOS mobile apps,
+                                        you'll need a Mac device.</p>
+                                        <b>Apple provides a plethora of top-notch materials and tools that are useful for iOS development, including:</b>
+                                        <ul>
+                                            <li><b> iOS SDK</b> integrated with the Cocoa Touch UI framework</li>
+                                            <li><b>XCode,</b> the official IDE for iOS development</li>
+                                            <li><b>Swift Playgrounds,</b> a learning platform for Swift development</li>
+                                            <li><b>TestFlight,</b> a beta testing app</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div id="hybridmobileapplication" class="tab-content row content">
+                    <div id="hybridmobileapplication" class="tab-content row content">
                         <div class="col-lg-6" data-aos="fade-right">
                             <h2>Eum ipsam laborum deleniti velitena</h2>
                             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen
@@ -238,7 +252,7 @@
                                 magna aliqua.
                             </p>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section><!-- End About Us Section -->
@@ -423,7 +437,37 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js">
     </script>
-
+<script>
+    function openCity(evt, cityName) {
+        // if(cityName == "nativemobileapplication"){
+        //     openPlatform(event, 'android')
+        // }
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "flex";
+        evt.currentTarget.className += " active";
+    }
+    function openPlatform(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("subcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks1");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+</script>
 </body>
 
 </html>

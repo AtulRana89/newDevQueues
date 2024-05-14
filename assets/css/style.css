@@ -2344,3 +2344,9 @@ ul.custom-ticks li::before {
 .text-center {
   text-align: center;
 }
+.tab-content {
+  display: none;
+}
+.subcontent {
+  display: none;
+}
