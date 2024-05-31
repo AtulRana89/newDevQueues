@@ -123,19 +123,17 @@
                     <h2>WE DESIGN CREATIVE MOBILE APPS <br /> THAT APPRECIED BY USERS</h2>
                 </div>
                 <div class="row">
-                    <div class="row justify-content-center">
-                        <ul class="nav nav-tabs text-center col-lg-10 mx-auto">
-                            <li class="nav-item col-md-6 col active">
-                                <!-- <a class="nav-link box_shadow p-4 text-center mb-5 text-uppercase" data-toggle="tab"
-                                    href="#nativemobileapplication">Native Mobile Application</a> -->
-                                    <button class="tablinks" onclick="openCity(event, 'nativemobileapplication')">Native Mobile Application</button>
+                    <div class="row justify-content-center mb-5">
+                        <ul class="nav text-center col-lg-10 mx-auto">
+                            <li class="nav-item col-md-6 col">
+                                    <button class="tablinks active" onclick="openTab(event, 'nativemobileapplication')">Native Mobile Application</button>
                             </li>
                             <li class="nav-item col-md-6 col">
-                                <button class="tablinks" onclick="openCity(event, 'hybridmobileapplication')">Hybrid Mobile Application</button>
-                                <!-- <a class="nav-link text-uppercase box_shadow p-4 text-center mb-5" data-toggle="tab"
-                                    href="#hybridmobileapplication">Hybrid Mobile Application</a> -->
+                                <button class="tablinks" onclick="openTab(event, 'hybridmobileapplication')">Hybrid Mobile Application</button>
                             </li>
                         </ul>
+                        <!-- <div class="tab active" onclick="openTab(event, 'nativemobileapplication')">Native Mobile Application</div>
+                        <div class="tab" onclick="openTab(event, 'hybridmobileapplication')">Hybrid Mobile Application</div> -->
                     </div>
                     <div id="nativemobileapplication" class="tab-content row content" style="display:flex;">
                         <div class="col-lg-6" data-aos="fade-up">
@@ -165,14 +163,20 @@
                         <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
                             <div class="row content">
                                 <div class="col-lg-6 tablinks1" data-aos="fade-up" onclick="openPlatform(event, 'android')">
+                                    <div class="arrowA active">
                                     <div class="testimonial-item" >
+                                        <img src="assets/img/android.png" alt="Android Icon">
                                         <h2>FOR ANDROID</h2>
+                                    </div>
                                     </div>
                                      <!-- <button class="tablinks" onclick="openCity(event, 'nativemobileapplication')">Native Mobile Application</button> -->
                                 </div>
                                 <div class="col-lg-6 tablinks1" data-aos="fade-up" onclick="openPlatform(event, 'kotlin')">
+                                    <div class="arrowA">
                                     <div class="testimonial-item">
+                                        <img src="assets/img/ios.png" alt="iOS Icon">
                                         <h2>FOR IOS</h2>
+                                    </div>
                                     </div>
                                 </div>
                                 <div id="android" class="mt-5 subcontent" style="display:block;">
@@ -438,7 +442,7 @@
     <script src="assets/js/main.js">
     </script>
 <script>
-    function openCity(evt, cityName) {
+    function openTab(evt, cityName) {
         // if(cityName == "nativemobileapplication"){
         //     openPlatform(event, 'android')
         // }
@@ -460,12 +464,20 @@
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
-            tablinks = document.getElementsByClassName("tablinks1");
+            tablinks = document.getElementsByClassName("tablinks1 arrowA");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
+                link.classList.remove('active');
             }
             document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
+            // evt.currentTarget.className += " active";
+             evt.currentTarget.querySelector('.arrowA').classList.add('active');
+            const tabLinks = document.querySelectorAll('.tablinks1 .arrowA');
+            tabLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            evt.currentTarget.querySelector('.arrowA').classList.add('active');
         }
 </script>
 </body>
