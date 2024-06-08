@@ -1373,7 +1373,7 @@ section {
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
-  padding: 40px;
+  padding: 20px;
   /* box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08); */
   position: relative;
   background: #fff;
@@ -2451,7 +2451,7 @@ ul.custom-ticks li::before {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   position: relative;
-  padding: 20px;
+  /* padding: 20px; */
   /* margin: 10px; */
 }
 
@@ -2511,3 +2511,108 @@ ul.custom-ticks li::before {
 .arrowA.active img {
   filter: none;
 }
+
+/* icon 3rd style */
+/* General site styling, if any */
+
+/* Styling specific to the member-info section */
+/* .icon-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.icon-info:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  position: relative;
+  width: 48px;
+  height: 80px;
+  margin-bottom: 10px;
+  transform: perspective(500px) rotateX(15deg) rotateY(15deg);
+  animation: float 3s ease-in-out infinite;
+}
+
+.icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.phone {
+  position: absolute;
+  bottom: 8px;
+  left: 6px;
+  width: 36px;
+  height: 54px;
+  background: #00A74D;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.chat-bubble {
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  width: 27px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 9px;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+}
+
+.chat-bubble.smaller {
+  top: 20px;
+  left: 18px;
+  width: 18px;
+  height: 13.5px;
+}
+
+.chat-bubble.smaller::after {
+  left: 5px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) perspective(500px) rotateX(15deg) rotateY(15deg);
+  }
+
+  50% {
+    transform: translateY(-10px) perspective(500px) rotateX(15deg) rotateY(15deg);
+  }
+} */
+/* end */

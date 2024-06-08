@@ -47,9 +47,9 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="about.html" >About</a></li>
                     <!-- <li><a href="services.html">Services</a></li> -->
-                    <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                    <li class="dropdown"><a href="#" class="active"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="app.html" class="mobile-app">Mobile App Development</a></li>
                             <li><a href="web.html" class="web-dev">Web Development</a></li>
@@ -137,7 +137,7 @@
                     </div>
                     <div id="nativemobileapplication" class="tab-content row content" style="display:flex;">
                         <div class="col-lg-6" data-aos="fade-up">
-                            <div class="app-item">
+                            <div class="app-item rounded-4">
                                 <h2>Native Mobile Application</h2>
                                 <p class="line-height-30"> A native app is a smartphone application developed
                                     specifically for a specific
@@ -220,13 +220,74 @@
                         </div>
                     </div>
                     <div id="hybridmobileapplication" class="tab-content row content">
-                        <div class="col-lg-6" data-aos="fade-right">
-                            <h2>Eum ipsam laborum deleniti velitena</h2>
-                            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen
-                                jonee
-                                trave</h3>
+                        <div class="col-lg-6" data-aos="fade-up">
+                            <div class="app-item rounded-4">
+                                <h2>Hybrid Mobile Application</h2>
+                                <p class="line-height-30">A hybrid application is a single programme that incorporates features from online apps and
+                                    native apps. In essence, it
+                                    is a JavaScript, HTML, and CSS online application that is integrated into a native app shell and linked to the
+                                    hardware
+                                    of the device.</p>
+                                <p>For our clients throughout the world, ranging from a bootstrapped startup to a major company, Dev
+                                Queues provides an
+                                    extensive array of top-notch professional hybrid application development services.</p>
+                                <ul class="mt-5 pl-0 custom-ticks">
+                                    <b>Advantages</b>
+                                    <li class="pl-5">Low development cost</li>
+                                    <li class="pl-5">Shorter time to market</li>
+                                    <li class="pl-5">High-speed performance</li>
+                                    <li class="pl-5">Multi-platform support</li>
+                                    <li class="pl-5">Offline use</li>
+                                    <li class="pl-5">Proof Of Concept (POC)</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
+                            <div class="row content">
+                                <div class="col-lg-6 tablinks1" data-aos="fade-up" onclick="openPlatform1(event, 'react')">
+                                    <div class="arrowA active">
+                                        <div class="testimonial-item">
+                                            <img src="assets/img/android.png" alt="Android Icon">
+                                            <h2>REACT NATIVE</h2>
+                                        </div>
+                                    </div>
+                                    <!-- <button class="tablinks" onclick="openCity(event, 'nativemobileapplication')">Native Mobile Application</button> -->
+                                </div>
+                                <div class="col-lg-6 tablinks1" data-aos="fade-up" onclick="openPlatform1(event, 'flutter')">
+                                    <div class="arrowA">
+                                        <div class="testimonial-item">
+                                            <img src="assets/img/ios.png" alt="iOS Icon">
+                                            <h2>FLUTTER APPS</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="react" class="mt-5 subcontent1" style="display:block;">
+                                    <div>
+                                        <h4>React Native</h4>
+                                        <p class="line-height-30">Facebook developed the open-source React Native technology for mobile applications. It lets developers utilise React in
+                                        addition to native platform features to create applications for Android, iOS, Web, and UWP.</p>
+                                    </div>
+                                    <div>
+                                        <h4>Expertise in React Native Development</h4>
+                                        <p class="line-height-30">React Native iOS and Android app development services are provided by our esteemed app development firm. Based on the
+                                        MVP paradigm, we develop Reactive Native apps that provide a fully functional product with a small set of features.</p>
+                                    </div>
+                                </div>
+                                <div id="flutter" class="mt-5 subcontent1">
+                                    <div>
+                                        <h4>Flutter</h4>
+                                        <p class="line-height-30">Google developed the open-source Flutter framework for developing mobile applications. It is the main tool for
+                                        developing apps for Google Fuchsia and is also used to create apps for iOS and Android.</p>
+                                        <h4>Leading Flutter app development company</h4>
+                                        <p>
+                                        Dev Queues creates cutting-edge solutions with the Flutter framework. We assist our clients in quickly designing
+                                        elegant, feature-rich native applications that work on both iOS and Android without requiring a separate codebase.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
                             <p>
                                 Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
                                 reprehenderit in
@@ -255,7 +316,7 @@
                                 dolore
                                 magna aliqua.
                             </p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -274,6 +335,11 @@
                         <div class="member" data-aos="fade-up">
                             <div class="member-info">
                                 <img src="assets/img/service/In-app-Chat.png" class="img-fluid" alt="">
+                                <!-- <div class="icon">
+                                    <div class="phone"></div>
+                                    <div class="chat-bubble"></div>
+                                    <div class="chat-bubble smaller"></div>
+                                </div> -->
                                 <h4>In-app Chat</h4>
                             </div>
                         </div>
@@ -444,7 +510,9 @@
 <script>
     function openTab(evt, cityName) {
         // if(cityName == "nativemobileapplication"){
-        //     openPlatform(event, 'android')
+        //     openPlatform(evt, 'android')
+        // }else{
+        //    openPlatform1(evt, 'react') 
         // }
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tab-content");
@@ -457,8 +525,10 @@
         }
         document.getElementById(cityName).style.display = "flex";
         evt.currentTarget.className += " active";
+        //  "arrowA" += " active";
     }
     function openPlatform(evt, cityName) {
+        console.log('openPlatform :',evt)
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("subcontent");
             for (i = 0; i < tabcontent.length; i++) {
@@ -478,7 +548,29 @@
             });
 
             evt.currentTarget.querySelector('.arrowA').classList.add('active');
+           
         }
+         function openPlatform1(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("subcontent1");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks1 arrowA");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    link.classList.remove('active');
+                }
+                document.getElementById(cityName).style.display = "block";
+                // evt.currentTarget.className += " active";
+                evt.currentTarget.querySelector('.arrowA').classList.add('active');
+                const tabLinks = document.querySelectorAll('.tablinks1 .arrowA');
+                tabLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                evt.currentTarget.querySelector('.arrowA').classList.add('active');
+            }
 </script>
 </body>
 
