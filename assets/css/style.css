@@ -30,7 +30,7 @@ h6 {
   visibility: hidden;
   opacity: 0;
   right: 15px;
-  bottom: 15px;
+  bottom: 20px;
   z-index: 996;
   background: #1bbd36;
   width: 40px;
@@ -2344,6 +2344,9 @@ ul.custom-ticks li::before {
 
 .text-center {
   text-align: center;
+}
+.align-self {
+  align-self: center;
 }
 .tab-content {
   display: none;
