@@ -2706,3 +2706,23 @@ margin: 0 auto;
   position: absolute;
   transition: all ease-in-out 0.3s;
 }
+.image-container {
+  display: flex;
+  justify-content: center;
+  /* Centers the image horizontally */
+  align-items: center;
+  /* Centers the image vertically */
+  padding: 20px;
+  /* Adjust padding for spacing */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  /* Centers the image inside the container */
+  object-fit: contain;
+  /* Ensures the image maintains aspect ratio */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: Adds a subtle shadow for a better look */
+}
