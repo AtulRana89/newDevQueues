@@ -851,13 +851,21 @@ section {
   margin-bottom: 0;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link,
+/* .portfolio .portfolio-item .portfolio-info .preview-link,
 .portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
   right: 40px;
   font-size: 24px;
   top: calc(50% - 18px);
   color: #2b2b2b;
+} */
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  /* position: absolute; */
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  /* color: #2b2b2b; */
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
@@ -916,7 +924,7 @@ section {
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: #f2f6fc;
   opacity: 1;
   border: 1px solid #1bbd36;
 }
@@ -2334,19 +2342,19 @@ section {
 }
 
 .mobile-app {
-  background-image: url('../img/mobile.png');
+  /* background-image: url('../img/mobile.png'); */
 }
 
 .web-dev {
-  background-image: url('../img/logo.png');
+  /* background-image: url('../img/logo.png'); */
 }
 
 .uiux {
-  background-image: url('../img/logo.png');
+  /* background-image: url('../img/logo.png'); */
 }
 
 .qa-testing {
-  background-image: url('../img/logo.png');
+  /* background-image: url('../img/logo.png'); */
 }
 
 ul.custom-ticks {
@@ -2706,23 +2714,98 @@ margin: 0 auto;
   position: absolute;
   transition: all ease-in-out 0.3s;
 }
+
+
+
+
 .image-container {
   display: flex;
   justify-content: center;
-  /* Centers the image horizontally */
   align-items: center;
-  /* Centers the image vertically */
   padding: 20px;
-  /* Adjust padding for spacing */
 }
 
 .image-container img {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
-  /* Centers the image inside the container */
   object-fit: contain;
-  /* Ensures the image maintains aspect ratio */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Optional: Adds a subtle shadow for a better look */
 }
+
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: rgba(0, 0, 0, .9);
+  /* Remove borders to make it cleaner */
+}
+
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  /* Ensure it stays on top of the image */
+}
+
+
+.modal-dialog {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Image container to control the dimensions */
+.image-container {
+  max-width: 100%;
+  margin: 40px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+
+  /* Adjust the max-width as needed for your mobile breakpoint */
+  .image-container {
+    margin: 0;
+    /* Remove margin on mobile devices */
+  }
+}
+
+ .btn-close {
+   position: fixed;
+   /* Fixed positioning to keep it on top */
+   top: 15px;
+   /* Adjust top position */
+   right: 15px;
+   /* Adjust right position */
+   z-index: 1051;
+   /* Higher z-index to stay on top of content */
+   background-color: #343434;
+   /* Background color */
+   border: none;
+   padding: 5px;
+   border-radius: 50%;
+   /* Circular shape */
+   opacity: 1;
+   color: black;
+   /* Cross icon color */
+   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+   width: 2em;
+   height: 2em;
+   color: #343434b5;
+   background: #34343452 var(--bs-btn-close-bg) center / 1em auto no-repeat;
+   /* Shadow effect */
+ }
+
+ .btn-close:hover {
+   background-color: #e9ecef;
+   /* Hover effect */
+ }
+ .section-pbg {
+   background-color: #f2f6fc;
+ }

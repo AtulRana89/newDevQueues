@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <style>
+        .layout {
+            display: flex;
+        }
+
+        .side-nav {
+            position: sticky;
+            /* Changed from fixed to sticky */
+            top: 0;
+            /* Make sure the sidebar sticks to the top of the viewport */
+            width: 200px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-right: 1px solid #ddd;
+            height: 100vh;
+            /* Make sure it covers the full height */
+            overflow-y: auto;
+            /* Add vertical scrolling if needed */
+        }
+
+        .side-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .side-nav ul li {
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .side-nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .side-nav ul li a.active::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 4px;
+            background-color: #1bbd36;
+            /* Scroll indicator color */
+            left: -20px;
+            top: 0;
+        }
+
+        .request-button {
+            margin-top: 20px;
+            background-color: #1bbd36;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .content-section {
+            padding: 50px 0;
+            min-height: 100vh;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Section 1: Banner -->
+    <section class="banner">
+        <h1>Store Audit Overview</h1>
+        <p>This is a top banner with introductory content.</p>
+    </section>
+
+    <section class="banner">
+        <div class="layout">
+            <!-- Left Side Navigation -->
+            <nav class="side-nav">
+                <ul>
+                    <li><a href="#overview" class="tab-link" id="overview-tab">Overview</a></li>
+                    <li><a href="#challenges" class="tab-link" id="challenges-tab">Challenges</a></li>
+                    <li><a href="#solutions" class="tab-link" id="solutions-tab">Solutions - Our Approach</a></li>
+                    <li><a href="#results" class="tab-link" id="results-tab">Results</a></li>
+                </ul>
+                <button class="request-button">Request Store Audit</button>
+            </nav>
+
+            <!-- Right Side Content Sections -->
+            <div class="content">
+                <section id="overview" class="content-section">
+                    <h2>Overview</h2>
+                    <p>Your overview content goes here...</p>
+                </section>
+                <section id="challenges" class="content-section">
+                    <h2>Challenges</h2>
+                    <p>Your challenges content goes here...</p>
+                </section>
+                <section id="solutions" class="content-section">
+                    <h2>Solutions - Our Approach</h2>
+                    <p>Your solutions content goes here...</p>
+                </section>
+                <section id="results" class="content-section">
+                    <h2>Results</h2>
+                    <p>Your results content goes here...</p>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <section class="additional-content">
+        <h3>Additional Insights</h3>
+        <p>Here you can add new content at the bottom of the page.</p>
+    </section>
+
+    <script>
+        // Highlight the active tab on scroll
+        function highlightTab() {
+            const sections = document.querySelectorAll('.content-section');
+            const tabs = document.querySelectorAll('.tab-link');
+
+            let index = sections.length;
+
+            // Detect the current section in view
+            while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
+
+            // Remove active class from all tabs and add to the current section
+            tabs.forEach((tab) => tab.classList.remove('active'));
+            tabs[index].classList.add('active');
+        }
+
+        // Scroll event listener to trigger tab highlighting
+        window.addEventListener('scroll', highlightTab);
+
+        // Smooth scroll to sections when tabs are clicked
+        document.querySelectorAll('.tab-link').forEach((tab) => {
+            tab.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetId = tab.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
